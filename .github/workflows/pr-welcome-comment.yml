@@ -14,9 +14,9 @@ jobs:
           script: |
             const prPoster = context.payload.pull_request.user.login;
             const message = `
-Hello @${prPoster}! Thank you for your contributions to the project! I can see the effort you've put into these changes, and it’s greatly appreciated 😍
+            Hello @${prPoster}! Thank you for your contributions to the project! I can see the effort you've put into these changes, and it’s greatly appreciated 😍
 
-Please know that a PR review is in progress, and you’ll be notified of any feedback soon.
+            Please know that a PR review is in progress, and you’ll be notified of any feedback soon.
             `;
             github.rest.issues.createComment({
               issue_number: context.payload.pull_request.number,
